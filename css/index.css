@@ -1,0 +1,137 @@
+
+
+/* 引导页css样式 */
+.lead{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+.img{
+  display: flex;
+  width: 400%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 600%;
+  height: 100%;
+  display: flex;
+  transition: margin-left 1s ;
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+.img>img{
+  width: 10.8rem;
+  height: 19.2rem;
+}
+.list{
+  display: flex;
+  position: absolute;
+  bottom: 1.75rem;
+  width: 100%;
+  justify-content: center;
+}
+.list>li>a{
+  display: block;
+  width: 0.15rem;
+  height: 0.15rem;
+  border-radius: 50%;
+  margin-left: 0.2rem;
+  background: #7f7f7f;
+}
+.list>li:first-child>a{
+  margin-left: 0;
+}
+.list>li>.active{
+  background: #313131;
+}
+
+.enter{
+  width: 10.8rem;
+  height: 19.2rem;
+  position: relative;
+}
+.enter>img{
+  width: 10.8rem;
+  height: 19.2rem;
+}
+.enter>.tuisong{
+  position: absolute;
+  width: 3rem;
+  height: 0.8rem;
+  left: 50%;
+  margin-left: -1.5rem;
+  /* background: #ccc; */
+  display: block;
+  z-index: 10;
+  bottom: 2.5rem;
+}
+
+.log-in{
+  position: relative;
+}
+.close{
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: #313131;
+  margin-left: 0.6rem;
+  background: none;
+}
+.log-inText{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 0.6rem;
+}
+.log-in>img{
+  width: 10.8rem;
+  height: 19.2rem;
+}
+.log-inText>input{
+  outline: none;
+  border: none;
+  background: none;
+  color: #4e4d4b;
+  line-height: 1.2rem;
+  width: 8.7rem;
+  margin-left: 1.1rem;
+  text-align: center;
+  font-size: 18px;
+}
+.log-inText>input:nth-child(2){
+  margin-top: 5.4rem;
+}
+.log{
+  display: flex;
+  width: 8.2rem;
+  margin-top: 1.2rem;
+  margin-left: 1.3rem;
+  justify-content: space-between;
+}
+.log>a{
+  width: 3em;
+  height: 0.78rem;
+  background: #313131;
+  /* display: block; */
+}
+.radio{
+  margin-top: 5.35rem;
+  display: block;
+  width: 0.26rem;
+  height: 0.26rem;
+  padding: 0.1rem;
+  margin-left: 2.6rem;
+}
+.radio>img{
+  width: 100%;
+   display: none;
+}

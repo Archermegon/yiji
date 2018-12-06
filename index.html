@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 10.8 + 'px';
+  </script>
+  <title>艺集</title>
+</head>
+<body>
+  <div class="lead">
+    <div class="img">
+      <img src="images/u1.jpg" alt="">
+      <img src="images/u3.jpg" alt="">
+      <img src="images/u5.jpg" alt="">
+      <img src="images/u8.jpg" alt="">
+      <div class="enter">
+        <img src="images/u10.jpg" alt="">
+        <a href="javascript:;" class="tuisong"></a>
+      </div>
+      <div class="log-in">
+        <img src="images/u13.jpg" alt="">
+        <div class="log-inText">
+            <a href="javascript:;" class="close"></a>
+           <input type="text" placeholder="点击输入手机号/E-mail登录">
+           <br>
+           <input type="text" placeholder='输入密码'>
+           <div class="log">
+             <a href="home.html"></a><a href="home.html"></a>
+           </div>
+           <a href="javascript:;" class="radio">
+             <img src="images/圆点1_u25.png" alt="">
+            </a>
+         </div>
+      </div>
+    </div>
+    <ul class="list">
+      <li><a href="javascript:;" class="active"></a></li>
+      <li><a href="javascript:;"></a></li>
+      <li><a href="javascript:;"></a></li>
+      <li><a href="javascript:;"></a></li>
+    </ul>
+  </div>
+  <script src="js/zepto.min.js"></script>
+  <script src="js/touch.js"></script>
+  <script>
+    var n = 0
+    var imgNum = $('.img>img').length
+    // console.log(imgNum);
+    var len = $('.img>img').width()
+    $('.lead').swipeLeft(function () { 
+       if(n<imgNum){
+          n++
+       }
+       if(n === imgNum){
+        //  console.log(n);
+         $('.list').css('display','none')
+       }
+       $('.img').css('margin-left',-len*n)
+       $('.list>li>a').removeClass('active')
+       $('.list>li>a').eq(n).addClass('active')
+      //  console.log($('.list>li>a').eq(n));
+    })
+    $('.lead').swipeRight(function () {
+        if (n < imgNum-1&&n>0) {
+          n --
+        }
+        if(n >= imgNum){
+          n --
+        }
+        $('.img').css('margin-left', -len * n)
+        $('.list>li>a').removeClass('active')
+        $('.list>li>a').eq(n).addClass('active')
+        // console.log($('.list>li>a').eq(n));
+      })
+
+    $('.tuisong').tap(function () { 
+      n = imgNum + 1
+      $('.img').css('margin-left', -len * n)
+     })
+    $('.close').tap(function () { 
+      n = imgNum
+      $('.img').css('margin-left', -len * n)
+     })
+    $('.radio').tap(function () { 
+      $('.radio>img').css('display','block')
+     })
+  </script>
+</body>
+</html>
